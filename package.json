@@ -1,0 +1,21 @@
+{
+  "name": "train",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "dev:show-page": "parcel src/page/my-home-page.html" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuZHui/train.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuZHui/train/issues"
+  },
+  "homepage": "https://github.com/SuZHui/train#readme"
+}
