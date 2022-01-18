@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "dev:show-page": "parcel src/page/my-home-page.html"
+    "build": "parcel --no-minify",
+    "dev:show-page": "parcel src/page/my-home-page/my-home-page.html",
+    "dev:danmaku-wall": "parcel src/page/danmaku-wall/index.html"
   },
   "repository": {
     "type": "git",

@@ -1,2 +1,2 @@
-import '../style/common.scss';
-import '../style/my-home-page.scss';
+import '../../style/common.scss';
+import '../../style/my-home-page.scss';

@@ -7,6 +7,9 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+button:active {
+  outline: 2px solid #8ec4fb;
+}
 
 // flex
 .flex {
