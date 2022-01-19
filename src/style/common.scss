@@ -11,6 +11,15 @@ button:active {
   outline: 2px solid #8ec4fb;
 }
 
+.w-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
 // flex
 .flex {
   display: flex;
@@ -21,6 +30,9 @@ button:active {
 }
 .items-center {
   align-items: center;
+}
+.flex-1 {
+  flex: 1 1 auto;
 }
 
 // text
@@ -39,6 +51,10 @@ button:active {
 
 .font-bold {
   font-weight: bold;
+}
+
+.text-white {
+  color: #FFFFFF;
 }
 
 // space

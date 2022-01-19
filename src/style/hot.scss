@@ -1,0 +1,40 @@
+.hot {
+  &-wrapper {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid #006fb0;
+    position: relative;
+    background-color: #FFF;
+    outline: 1px solid #006fb0;
+    outline-offset: -6px;
+  }
+  .hot-item {
+    width: 100%;
+    cursor: pointer;
+    .hot-image {
+      & > img {
+        width: 100%;
+        // height: 200px;
+        @media (max-width: 767px) {
+          height: 40vw;
+        }
+        @media (max-width: 768px) {
+          height: 326px;
+        }
+        @media (min-width: 576px) {
+          height: 24vw;
+        }
+        @media (min-width: 992px) {
+          height: 134px;
+        }
+        object-fit: cover;
+      }
+    }
+    .hot-title {
+      padding-top: 6px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "parcel --no-minify",
     "dev:show-page": "parcel src/page/my-home-page/my-home-page.html",
-    "dev:danmaku-wall": "parcel src/page/danmaku-wall/index.html"
+    "dev:danmaku-wall": "parcel src/page/danmaku-wall/index.html",
+    "dev:enterprise": "parcel src/page/enterprise/*.pug"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "cssnano": "^5.0.15",
     "postcss": "^8.4.5",
+    "pug": "^3.0.2",
     "sass": "^1.48.0"
   }
 }

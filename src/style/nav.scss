@@ -1,0 +1,44 @@
+.banner {
+  height: 300px;
+  overflow: hidden;
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
+}
+@media (min-width: 576px) {
+  .banner {
+    height: 400px;
+    img {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .banner {
+    height: 400px;
+    img {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+@media (min-width: 991.98px) {
+  .banner {
+    height: 400px;
+    img {
+      height: auto;
+      transform: translateY(-60px);
+    }
+  }
+}
+@media (min-width: 1199.98px) {
+  .banner {
+    height: 500px;
+    img {
+      height: auto;
+      transform: translateY(-40px);
+    }
+  }
+}
