@@ -3,7 +3,7 @@
 ## TODO LIST
 
 - 完成企业站 参考 https://jojo-portal.com/zh/anime/so/
-- 首页 (团队介绍 最新动态 热门产品) 首页响应性
+- 完成mock数据的JSON文件
 - 新闻列表
 - 新闻详情
 - 关于我们

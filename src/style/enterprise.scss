@@ -25,4 +25,12 @@
   section {
     margin-bottom: 20px;
   }
+  main {
+    flex: 1;
+  }
+  .pagination {
+    .page-link, .page-link > span {
+      font-family: '微软雅黑', Helvetica, sans-serif;
+    }
+  }
 }
