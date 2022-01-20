@@ -1,5 +1,5 @@
 * {
-  font-family: '仿宋', 'Inknut Antiqua', serif;
+  font-family: '仿宋', serif;
 }
 
 @import './nav.scss';
@@ -9,7 +9,7 @@
 // @import './news.scss';
 
 // 详情页
-@import './detail.scss';
+// @import './detail.scss';
 
 .enterprise {
   overflow-y: auto;
@@ -31,9 +31,10 @@
   main {
     flex: 1;
   }
-  .pagination {
-    .page-link, .page-link > span {
-      font-family: '微软雅黑', Helvetica, sans-serif;
-    }
+}
+
+.pagination {
+  .page-link, .page-link > span {
+    font-family: '微软雅黑', Helvetica, sans-serif;
   }
 }

@@ -2306,25 +2306,29 @@ function renderPagination() {
   $('.page-item.next .page-link').attr('href', "?page=3");
 }
 
-function renderNewsList() {
-  var list = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
+function renderNewsList (list = []) {
   if (list.length <= 0) {
-    // TODO: 渲染暂无数据
-    $('.no-data').removeClass('d-none');
-    return;
+    // 渲染暂无数据
+    $('.no-data').removeClass('d-none')
+    return
   }
-
-  $('.pagination').removeClass('d-none');
-  var wrapper = $('.news-wrapper');
-  list.forEach(function (news) {
-    var a = $('<a></a>').addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-2');
-    var image = $('<div class="news-image"></div>');
-    image.append($('<img/>').attr('src', news.img));
-    var info = $('<div class="news-info"></div>').append($('<span class="date"></span>').text((0, _dayjs.default)(news.date).format('YYYY.MM.DD'))).append($('<p class="desc"></p>').text(news.desc));
-    $('<div class="news-item"></div>').append(image).append(info).appendTo(a);
-    wrapper.append(a);
-  });
+  $('.pagination').removeClass('d-none')
+  const wrapper = $('.news-wrapper')
+  list.forEach(news => {
+    const a = $('<a></a>')
+      .attr('href', `detail?id=${news.id}`)
+      .addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-2')
+    const image = $('<div class="news-image"></div>')
+    image.append($('<img/>').attr('src', news.img))
+    const info = $('<div class="news-info"></div>')
+      .append($('<span class="date"></span>').text(dayjs(news.date).format('YYYY.MM.DD')))
+      .append($('<p class="desc"></p>').text(news.desc))
+    $('<div class="news-item"></div>')
+      .append(image)
+      .append(info)
+      .appendTo(a)
+    wrapper.append(a)
+  })
 }
 },{"dayjs":"XZPv","./api":"VO5s"}]},{},["gTtB"], null)
 //# sourceMappingURL=/list.b0bd7e8d.js.map

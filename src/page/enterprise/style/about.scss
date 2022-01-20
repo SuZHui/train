@@ -1,0 +1,18 @@
+@import './layout.scss';
+
+.about {
+  &-introduction {
+    background: url('../image/bg_pattern_02.png') repeat top center;
+  }
+  &-map {
+    box-sizing: border-box;
+    border: 3px solid #006fb0;
+    background-color: #FFF;
+    outline: 1px solid #006fb0;
+    outline-offset: -6px;
+  }
+  #aboutmap {
+    height: 100%;
+    min-height: 400px;
+  }
+}

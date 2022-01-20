@@ -31,20 +31,30 @@
       .news-info {
         font-family: '微软雅黑';
         padding: 10px 14px 14px;
-        .date, .desc {
+        .date, .desc, .title {
           font-family: inherit;
           font-size: 14px;
+        }
+        .title {
+          font-weight: bold;
+          color: #333;
+          font-size: 16px;
+          overflow: hidden;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          height: 18px;
         }
         .desc {
           margin-top: 10px;
           color: #333;
           font-weight: 500;
           // letter-spacing: .025em;
-          display: -webkit-box;
+          // display: -webkit-box;
           overflow: hidden;
           -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
-          height: 86px;
+          height: 46px;
         }
         .date {
           font-weight: bold;

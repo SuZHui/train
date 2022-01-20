@@ -6,14 +6,15 @@ $(document).ready(function () {
   
   API.getNewsList(page)
     .then(res => {
-      $('.loading').addClass('d-none')
       renderNewsList(res)
       renderPagination(page)
     })
     .catch(err => {
       console.error(err)
-      $('.loading').addClass('d-none')
       $('.no-data').removeClass('d-none')
+    })
+    .finally(() => {
+      $('.loading').addClass('d-none')
     })
 })
 
@@ -40,7 +41,7 @@ function renderPagination (page = 1) {
 
 function renderNewsList (list = []) {
   if (list.length <= 0) {
-    // TODO: 渲染暂无数据
+    // 渲染暂无数据
     $('.no-data').removeClass('d-none')
     return
   }
@@ -48,10 +49,12 @@ function renderNewsList (list = []) {
   const wrapper = $('.news-wrapper')
   list.forEach(news => {
     const a = $('<a></a>')
+      .attr('href', `detail.html?id=${news.id}`)
       .addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-2')
     const image = $('<div class="news-image"></div>')
-    image.append($('<img/>').attr('src', news.img))
+    image.append($('<img width="100%" height="160px"/>').attr('src', news.img))
     const info = $('<div class="news-info"></div>')
+      .append($('<h4 class="title"></h4>').text(news.title))
       .append($('<span class="date"></span>').text(dayjs(news.date).format('YYYY.MM.DD')))
       .append($('<p class="desc"></p>').text(news.desc))
     $('<div class="news-item"></div>')

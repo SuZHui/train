@@ -10,5 +10,8 @@ export default {
       return Promise.reject(new Error('暂无数据'))
     }
     return client.get('https://61e80b15e32cd90017acbfb7.mockapi.io/enterprise/news', { params: { page } })
+  },
+  getNewsItem (id) {
+    return client.get(`https://61e80b15e32cd90017acbfb7.mockapi.io/enterprise/news/${id}`)
   }
 }
