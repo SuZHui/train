@@ -294,7 +294,7 @@
   overflow: hidden;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  height: 46px;
+  height: 66px;
 }
 .news-wrapper .news-item .news-info .date {
   font-weight: bold;
@@ -303,4 +303,4 @@
   color: #FFF;
 }
 
-/*# sourceMappingURL=/style.1d7cddbe.css.map */
+/*# sourceMappingURL=/style.e3f890de.css.map */

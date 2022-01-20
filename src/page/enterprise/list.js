@@ -52,7 +52,7 @@ function renderNewsList (list = []) {
       .attr('href', `detail.html?id=${news.id}`)
       .addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-2')
     const image = $('<div class="news-image"></div>')
-    image.append($('<img width="100%" height="160px"/>').attr('src', news.img))
+    image.append($('<img width="100%" height="160px" class="lazyload" data-sizes="auto"/>').attr('data-src', news.img))
     const info = $('<div class="news-info"></div>')
       .append($('<h4 class="title"></h4>').text(news.title))
       .append($('<span class="date"></span>').text(dayjs(news.date).format('YYYY.MM.DD')))

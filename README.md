@@ -4,7 +4,6 @@
 
 - 完成企业站 参考 https://jojo-portal.com/zh/anime/so/
 - 完成mock数据的JSON文件
-- 关于我们
 - 列表页占位图
 - 详情页图片懒加载
 
