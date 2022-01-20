@@ -1,6 +1,6 @@
 @charset "UTF-8";
 * {
-  font-family: "仿宋", "Inknut Antiqua", serif;
+  font-family: "仿宋", serif;
 }
 
 .banner {
@@ -23,16 +23,16 @@
 }
 @media (min-width: 768px) {
   .banner {
-    height: 400px;
+    height: 500px;
   }
   .banner img {
-    height: 400px;
+    height: 500px;
     object-fit: cover;
   }
 }
 @media (min-width: 991.98px) {
   .banner {
-    height: 400px;
+    height: 500px;
   }
   .banner img {
     height: auto;
@@ -41,7 +41,7 @@
 }
 @media (min-width: 1199.98px) {
   .banner {
-    height: 500px;
+    height: 600px;
   }
   .banner img {
     height: auto;
@@ -49,7 +49,7 @@
   }
 }
 .enterprise-footer {
-  background: url("/train/enterprise/assets/bg_pattern_02.png") repeat top center/246px 280px;
+  background: url("/bg_pattern_02.cbf19887.png") repeat top center/246px 280px;
   padding: 10px 0;
 }
 .enterprise-footer .footer-content {
@@ -88,6 +88,32 @@
   color: #FFFFFF;
   font-family: "微软雅黑", "Helvetica Neue";
   padding-top: 10px;
+}
+
+.enterprise {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.enterprise .section-title {
+  text-align: center;
+  color: #006fb0;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+.enterprise section {
+  margin-bottom: 20px;
+}
+.enterprise main {
+  flex: 1;
+}
+
+.pagination .page-link, .pagination .page-link > span {
+  font-family: "微软雅黑", Helvetica, sans-serif;
 }
 
 .hot-wrapper {
@@ -143,10 +169,14 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
+  cursor: pointer;
+}
+.character-item:hover .character-image > img {
+  transform: translateX(-50%) scale(1.04);
 }
 .character-item .character-image {
   box-sizing: border-box;
-  margin-top: 40px;
+  margin-top: 30px;
   border: 4px solid #006fb0;
   height: calc(100% - 40px);
   width: 100%;
@@ -170,15 +200,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/train/enterprise/assets/bg_pattern_03.png") repeat bottom center/196px 146px;
+  background: url("/bg_pattern_03.e1cf78e9.png") repeat bottom center/196px 146px;
 }
 .character-item .character-image > img {
   width: 260px;
   height: auto;
   position: absolute;
-  top: -40px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
+  will-change: transform;
+  transition: transform 0.6s ease;
 }
 .character-item .character-info {
   font-size: 20px;
@@ -189,7 +221,7 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-  background: url("/train/enterprise/assets/bg_chara.png") no-repeat top center/cover;
+  background: url("/bg_chara.5c163c95.png") no-repeat top center/cover;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -241,19 +273,28 @@
   font-family: "微软雅黑";
   padding: 10px 14px 14px;
 }
-.news-wrapper .news-item .news-info .date, .news-wrapper .news-item .news-info .desc {
+.news-wrapper .news-item .news-info .date, .news-wrapper .news-item .news-info .desc, .news-wrapper .news-item .news-info .title {
   font-family: inherit;
   font-size: 14px;
+}
+.news-wrapper .news-item .news-info .title {
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  height: 18px;
 }
 .news-wrapper .news-item .news-info .desc {
   margin-top: 10px;
   color: #333;
   font-weight: 500;
-  display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  height: 86px;
+  height: 46px;
 }
 .news-wrapper .news-item .news-info .date {
   font-weight: bold;
@@ -262,27 +303,4 @@
   color: #FFF;
 }
 
-.enterprise {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-.enterprise .section-title {
-  text-align: center;
-  color: #006fb0;
-  font-size: 28px;
-  font-weight: bold;
-  margin: 20px auto;
-}
-.enterprise section {
-  margin-bottom: 20px;
-}
-.enterprise main {
-  flex: 1;
-}
-.enterprise .pagination .page-link, .enterprise .pagination .page-link > span {
-  font-family: "微软雅黑", Helvetica, sans-serif;
-}
+/*# sourceMappingURL=/style.1d7cddbe.css.map */
