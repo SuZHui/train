@@ -49,7 +49,7 @@
   }
 }
 .enterprise-footer {
-  background: url("/bg_pattern_02.cbf19887.png") repeat top center/246px 280px;
+  background: url("./bg_pattern_02.cbf19887.png") repeat top center/246px 280px;
   padding: 10px 0;
 }
 .enterprise-footer .footer-content {
@@ -200,7 +200,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/bg_pattern_03.e1cf78e9.png") repeat bottom center/196px 146px;
+  background: url("./bg_pattern_03.e1cf78e9.png") repeat bottom center/196px 146px;
 }
 .character-item .character-image > img {
   width: 260px;
@@ -221,7 +221,7 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-  background: url("/bg_chara.5c163c95.png") no-repeat top center/cover;
+  background: url("./bg_chara.5c163c95.png") no-repeat top center/cover;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
