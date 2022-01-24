@@ -1,36 +1,37 @@
 section.news.container
   h2.section-title 最新动态
+  p.text-center.no-data.d-none 暂无数据
   .news-wrapper.row
-    a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=1")
-      .news-item
-        .news-image
-          img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2021/12/news_jojo-so_oraora-radio-s_211209_-380x214.jpg", alt="新闻图片", data-sizes="auto")
-        .news-info
-          h4.title 第1話推送
-          span.date 2021.12.09
-          p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
-    a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=2")
-      .news-item
-        .news-image
-          img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2021/11/jojo_news_thumb_1109-380x214.jpg", alt="新闻图片", data-sizes="auto")
-        .news-info
-          h4.title 第2話推送
-          span.date 2021.12.09
-          p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
-    a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=3")
-      .news-item
-        .news-image
-          img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2022/01/thumb_0107-380x214.jpg", alt="新闻图片", data-sizes="auto")
-        .news-info
-          h4.title 第3話推送
-          span.date 2021.12.09
-          p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
-    a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=4")
-      .news-item
-        .news-image
-          img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2021/12/news_anime-jojo-so_sp-m-art_211212-380x214.jpg", alt="新闻图片", data-sizes="auto")
-        .news-info
-          h4.title 第4話推送
-          span.date 2021.12.09
-          p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
+    //- a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=1")
+    //-   .news-item
+    //-     .news-image
+    //-       img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2021/12/news_jojo-so_oraora-radio-s_211209_-380x214.jpg", alt="新闻图片", data-sizes="auto")
+    //-     .news-info
+    //-       h4.title 第1話推送
+    //-       span.date 2021.12.09
+    //-       p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
+    //- a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=2")
+    //-   .news-item
+    //-     .news-image
+    //-       img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2021/11/jojo_news_thumb_1109-380x214.jpg", alt="新闻图片", data-sizes="auto")
+    //-     .news-info
+    //-       h4.title 第2話推送
+    //-       span.date 2021.12.09
+    //-       p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
+    //- a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=3")
+    //-   .news-item
+    //-     .news-image
+    //-       img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2022/01/thumb_0107-380x214.jpg", alt="新闻图片", data-sizes="auto")
+    //-     .news-info
+    //-       h4.title 第3話推送
+    //-       span.date 2021.12.09
+    //-       p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
+    //- a.col-12.col-md-6.col-sm-6.col-lg-3.mb-2(href="detail.pug?id=4")
+    //-   .news-item
+    //-     .news-image
+    //-       img.lazyload(data-src="https://jojo-portal.com/wp-content/uploads/2021/12/news_anime-jojo-so_sp-m-art_211212-380x214.jpg", alt="新闻图片", data-sizes="auto")
+    //-     .news-info
+    //-       h4.title 第4話推送
+    //-       span.date 2021.12.09
+    //-       p.desc 仅用3天时间，JOJO石之海就在播放量上超越了鬼灭之刃第二季，达到了3700万，按照这个速度破亿只是时间问题。而本季日漫播放量最高的国王排名，开播两个多月了也才刚刚过亿，最近还因为剧情问题导致评分开始下降！
 

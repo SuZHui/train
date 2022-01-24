@@ -1,6 +1,9 @@
 * {
   font-family: '仿宋', serif;
 }
+p {
+  text-indent: 2em;
+}
 
 @import './nav.scss';
 @import './footer.scss';
@@ -14,6 +17,7 @@
 .enterprise {
   overflow-y: auto;
   overflow-x: hidden;
+  padding-top: 60px;
   height: 100vh;
   width: 100vw;
   display: flex;

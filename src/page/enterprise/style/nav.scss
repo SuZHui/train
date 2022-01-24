@@ -1,5 +1,5 @@
 .banner {
-  height: 300px;
+  height: auto;
   overflow: hidden;
   img {
     height: 300px;
@@ -26,19 +26,17 @@
 }
 @media (min-width: 991.98px) {
   .banner {
-    height: 500px;
+    height: 600px;
     img {
       height: auto;
-      transform: translateY(-60px);
     }
   }
 }
 @media (min-width: 1199.98px) {
   .banner {
-    height: 600px;
+    height: 800px;
     img {
       height: auto;
-      transform: translateY(-40px);
     }
   }
 }

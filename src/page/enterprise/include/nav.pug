@@ -5,11 +5,20 @@
     li(data-slide-to="2", data-target="#carousel-example-generic")
   .carousel-inner(role="listbox")
     .carousel-item.active
-      img.d-block.w-100(src="https://wallpapers.com/images/high/jojo-bizarre-adventure-hero-banners-97au0jin9lw0i6lz.jpg", alt="")
+      img.img-fluid.lazyload.d-block.w-100(
+        data-src="https://wallpapers.com/images/high/jojo-bizarre-adventure-hero-banners-97au0jin9lw0i6lz.jpg",
+        data-srcset="https://img.win3000.com/m00/fc/b6/2c452935cbf0a2e01fcefbc198d19175.jpg 2x"
+        alt="")
     .carousel-item
-      img.d-block.w-100(src="https://gamingtrend.com/wp-content/uploads/2018/08/jojosbizarreadventure-anime-keyart-s1tos3.jpg", alt="")
+      img.img-fluid.lazyload.d-block.w-100(
+        data-src="https://gamingtrend.com/wp-content/uploads/2018/08/jojosbizarreadventure-anime-keyart-s1tos3.jpg",
+        data-srcset="http://pic4.zhimg.com/v2-124f7588f6deb6f5d302bb1b9d471ea7_r.jpg?source=1940ef5c 2x"
+        alt="")
     .carousel-item
-      img.d-block.w-100(src="https://www.yifengame.com/wp-content/uploads/2021/08/20210807031646-610dfb1e6c394.jpg", alt="")
+      img.img-fluid.lazyload.d-block.w-100(
+        data-src="https://www.yifengame.com/wp-content/uploads/2021/08/20210807031646-610dfb1e6c394.jpg",
+        data-srcset="https://p5-tt.byteimg.com/origin/pgc-image/5f83ad50bdc14830969cd8f4c686621a.jpg 2x"
+        alt="")
   button.carousel-control-prev(type="button", data-target="#carousel-example-generic", data-slide="prev")
     span.carousel-control-prev-icon(aria-hidden="true")
     span.sr-only Previous

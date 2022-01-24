@@ -13,5 +13,8 @@ export default {
   },
   getNewsItem (id) {
     return client.get(`https://61e80b15e32cd90017acbfb7.mockapi.io/enterprise/news/${id}`)
+  },
+  getHots () {
+    return client.get('https://61e80b15e32cd90017acbfb7.mockapi.io/enterprise/home')
   }
 }
