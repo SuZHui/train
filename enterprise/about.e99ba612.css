@@ -51,7 +51,7 @@ p {
   }
 }
 .enterprise-footer {
-  background: url("./bg_pattern_02.f56f56fe.png") repeat top center/246px 280px;
+  background: url("./bg_pattern_02.cbf19887.png") repeat top center/246px 280px;
   padding: 10px 0;
 }
 .enterprise-footer .footer-content {
@@ -119,69 +119,19 @@ p {
   font-family: "微软雅黑", Helvetica, sans-serif;
 }
 
-.news-wrapper {
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
+.about-introduction {
+  background: url("./bg_pattern_02.cbf19887.png") repeat top center;
 }
-.news-wrapper a {
-  text-decoration: unset !important;
+.about-map {
+  box-sizing: border-box;
+  border: 3px solid #006fb0;
+  background-color: #FFF;
+  outline: 1px solid #006fb0;
+  outline-offset: -6px;
 }
-.news-wrapper .news-item {
-  cursor: pointer;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 0 20px rgba(0, 44, 69, 0.12);
-  transition: box-shadow 0.4s;
-}
-.news-wrapper .news-item:hover {
-  box-shadow: 0 0 5px rgba(0, 44, 69, 0.12);
-}
-.news-wrapper .news-item:hover .news-image > img {
-  transform: scale(1.05);
-}
-.news-wrapper .news-item .news-image {
-  overflow: hidden;
-}
-.news-wrapper .news-item .news-image > img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  transform: none;
-  transition: transform 0.4s;
-}
-.news-wrapper .news-item .news-info {
-  font-family: "微软雅黑";
-  padding: 10px 14px 14px;
-}
-.news-wrapper .news-item .news-info .date, .news-wrapper .news-item .news-info .desc, .news-wrapper .news-item .news-info .title {
-  font-family: inherit;
-  font-size: 14px;
-}
-.news-wrapper .news-item .news-info .title {
-  font-weight: bold;
-  color: #333;
-  font-size: 16px;
-  overflow: hidden;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  height: 18px;
-}
-.news-wrapper .news-item .news-info .desc {
-  margin-top: 10px;
-  color: #333;
-  font-weight: 500;
-  overflow: hidden;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  height: 66px;
-}
-.news-wrapper .news-item .news-info .date {
-  font-weight: bold;
-  padding: 4px 8px;
-  background: #8bbf08;
-  color: #FFF;
+.about #aboutmap {
+  height: 100%;
+  min-height: 400px;
 }
 
-/*# sourceMappingURL=/list.e837c107.css.map */
+/*# sourceMappingURL=./about.e99ba612.css.map */
