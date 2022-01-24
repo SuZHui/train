@@ -74,6 +74,9 @@ p {
   margin: 0 auto 10px;
 }
 .enterprise-footer .footer-content__left-item > span {
+  display: block;
+  word-wrap: break-word;
+  text-align: center;
   color: #FFFFFF;
   font-size: 14px;
   font-family: "Helvetica Neue", "微软雅黑";
