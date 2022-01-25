@@ -20,7 +20,7 @@ function getId () {
 function renderDetail (data) {
   const title = $('<div class="row"></div>').append($('<h2 class="col-12 section-title"></h2>').text(data.title))
   const image = $('<div class="mx-auto col-12 col-md-7"></div>')
-    .append($('<img class="w-100 lazyload" data-sizes="auto" />').attr('data-src', data.img))
+    .append($('<img class="w-100 lazyload" data-sizes="auto" src="https://i.stack.imgur.com/ATB3o.gif" />').attr('data-src', data.img))
   const desc = $('<p class="col-12 py-2 text-break text-justify"></p>').text(data.desc)
   const content = $('<div class="row"></div>')
     .append([image, desc])

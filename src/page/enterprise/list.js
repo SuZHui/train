@@ -2,12 +2,12 @@ import dayjs from 'dayjs'
 import API from './api'
 
 $(document).ready(function () {
-  const page = getPageIndex() || 1
+  const params = getParams() || { page: 1, limit: 12 }
   
-  API.getNewsList(page)
+  API.getNewsList(params.page, params.limit)
     .then(res => {
-      renderNewsList(res)
-      renderPagination(page)
+      renderNewsList(res.items)
+      renderPagination(params.page, params.limit, res.count)
     })
     .catch(err => {
       console.error(err)
@@ -22,21 +22,39 @@ $(document).ready(function () {
  * 获取链接查询参数
  * @returns 
  */
-function getPageIndex () {
+function getParams () {
   const urlParams = new URLSearchParams(location.search)
-  return Number(urlParams.get('page'))
+  return {
+    page: Number(urlParams.get('page')) || 1,
+    limit: Number(urlParams.get('limit')) || 12
+  }
 }
 
-function renderPagination (page = 1) {
+function renderPagination (page = 1, limit = 12, total) {
+  const pagination = {
+    current: page,
+    sizes: Math.ceil(total / limit)
+  }
+
   if (page <= 1) {
     $('.page-item.prev').addClass('disabled')
   }
-  if (page >= 3) {
+  if (pagination.sizes <= pagination.current) {
     $('.page-item.next').addClass('disabled')
   }
-  $('.jumper').eq(page - 1).addClass('active')
-  $('.page-item.prev .page-link').attr('href', `?page=1`)
-  $('.page-item.next .page-link').attr('href', `?page=3`)
+
+  
+  $('.page-item.prev .page-link').attr('href', `?page=1&limit=${limit}`)
+  $('.page-item.next .page-link').attr('href', `?page=${pagination.sizes}&limit=${limit}`)
+
+  const nodes = Array.from({ length: pagination.sizes }, (_, i) => {
+    const index = i + 1
+    return $('<div class="page-item jumper">')
+      .append($('<a class="page-link">').attr('href', `?page=${index}&limit=${limit}`).text(index))
+  })
+  $('.pagination .prev')
+    .after(nodes)
+  $('.jumper').eq(pagination.current - 1).addClass('active')
 }
 
 function renderNewsList (list = []) {
@@ -50,9 +68,15 @@ function renderNewsList (list = []) {
   list.forEach(news => {
     const a = $('<a></a>')
       .attr('href', `detail.html?id=${news.id}`)
-      .addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-2')
+      .addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-4')
     const image = $('<div class="news-image"></div>')
-    image.append($('<img width="100%" height="160px" class="lazyload" data-sizes="auto"/>').attr('data-src', news.img))
+    image
+      .append(
+        $('<img width="100%" height="160px" class="lazyload" data-sizes="auto"/>')
+        .attr({
+          'data-src': news.img,
+          'src': 'https://i.stack.imgur.com/ATB3o.gif'
+        }))
     const info = $('<div class="news-info"></div>')
       .append($('<h4 class="title"></h4>').text(news.title))
       .append($('<span class="date"></span>').text(dayjs(news.date).format('YYYY.MM.DD')))

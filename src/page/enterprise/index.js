@@ -19,10 +19,11 @@ function showError () {
 function renderHots (list = []) {
   const wrapper = $('.news .news-wrapper.row')
   list.forEach(li => {
-    const a = $('<a></a>').addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-2')
+    const a = $('<a></a>').addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-4')
       .attr('href', `detail.html?id=${li.id}`)
     const img = $('<div></div>').addClass('news-image')
       .append($('<img>').addClass('lazyload').attr({
+        src: 'https://i.stack.imgur.com/ATB3o.gif',
         'data-src': li.img,
         'data-sizes': 'auto'
       }))

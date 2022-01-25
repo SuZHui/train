@@ -2242,14 +2242,11 @@ client.interceptors.response.use(function (res) {
 var _default = {
   getNewsList: function getNewsList() {
     var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-    if (page > 3 || page < 1) {
-      return Promise.reject(new Error('暂无数据'));
-    }
-
+    var limit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 12;
     return client.get('https://61e80b15e32cd90017acbfb7.mockapi.io/enterprise/news', {
       params: {
-        page: page
+        page: page,
+        limit: limit
       }
     });
   },
@@ -2261,7 +2258,7 @@ var _default = {
   }
 };
 exports.default = _default;
-},{"axios":"gI3o"}],"Focm":[function(require,module,exports) {
+},{"axios":"gI3o"}],"FUi9":[function(require,module,exports) {
 "use strict";
 
 var _api = _interopRequireDefault(require("./api"));
@@ -2269,31 +2266,28 @@ var _api = _interopRequireDefault(require("./api"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-  _api.default.getHots().then(function (res) {
-    renderHots(res.data || []);
-  }).catch(function (err) {
-    console.error(err);
-    showError();
+  var id = getId();
+
+  _api.default.getNewsItem(id).then(function (res) {
+    renderDetail(res); // debugger
+  }).catch(function () {
+    $('.no-data').removeClass('d-none');
+  }).finally(function () {
+    $('.loading').addClass('d-none');
   });
 });
 
-function showError() {
-  $('.news .no-data').removeClass('d-none');
+function getId() {
+  var params = new URLSearchParams(location.search);
+  return params.get('id');
 }
 
-function renderHots() {
-  var list = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var wrapper = $('.news .news-wrapper.row');
-  list.forEach(function (li) {
-    var a = $('<a></a>').addClass('col-12 col-md-6 col-sm-6 col-lg-3 mb-2').attr('href', "detail.html?id=".concat(li.id));
-    var img = $('<div></div>').addClass('news-image').append($('<img>').addClass('lazyload').attr({
-      'data-src': li.img,
-      'data-sizes': 'auto'
-    }));
-    var info = $('<div></div>').addClass('news-info').append($('<h4 class="title"></h4>').text(li.title)).append($('<span class="date"></span>').text(li.date)).append($('<p class="desc"></p>').text(li.desc));
-    a.append($('<div class="news-item">').append(img).append(info));
-    wrapper.append(a);
-  });
+function renderDetail(data) {
+  var title = $('<div class="row"></div>').append($('<h2 class="col-12 section-title"></h2>').text(data.title));
+  var image = $('<div class="mx-auto col-12 col-md-7"></div>').append($('<img class="w-100 lazyload" data-sizes="auto" src="https://i.stack.imgur.com/ATB3o.gif" />').attr('data-src', data.img));
+  var desc = $('<p class="col-12 py-2 text-break text-justify"></p>').text(data.desc);
+  var content = $('<div class="row"></div>').append([image, desc]);
+  $('.detail').append([title, content]);
 }
-},{"./api":"VO5s"}]},{},["Focm"], null)
-//# sourceMappingURL=/enterprise.6e4c463b.js.map
+},{"./api":"VO5s"}]},{},["FUi9"], null)
+//# sourceMappingURL=/detail.96de2cd2.js.map
